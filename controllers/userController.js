@@ -1,5 +1,6 @@
 const User = require("../models/User");
 
+
 const checkController=async (req, res) => {
     try {
         const email = req.body.email;
