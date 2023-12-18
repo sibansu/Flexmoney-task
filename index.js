@@ -5,7 +5,9 @@ var cors = require('cors');
 const connectDB = require("./Config/db");
 const path = require('path')
 const app = express();
+const dotenv = require('dotenv')
 
+dotenv.config()
 
 app.use(express.json());
 app.use(cors());
@@ -22,6 +24,8 @@ app.get('*', (req, res)=>{
     res.sendFile(path.join(__dirname, './client/build/index.html'))
 })
 
-app.listen("8000", () => {
+const port = process.env.PORT || 8000
+
+app.listen(port, () => {
     console.log("server started");
 })
