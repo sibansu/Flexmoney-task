@@ -10,16 +10,12 @@ function Confirmation({name, age, address, contact, email, currentValue, month})
                     <span>{name}</span>
                 </div>
                 <div class="info-field">
-                    <label for="email">Email:</label>
-                    <span>{age}</span>
-                </div>
-                <div class="info-field">
                     <label for="phone">Address:</label>
                     <span>{address}</span>
                 </div>
                 <div class="info-field">
                     <label for="age">Age:</label>
-                    <span>{contact}</span>
+                    <span>{age}</span>
                 </div>
                 <div class="info-field">
                     <label for="age">Email:</label>

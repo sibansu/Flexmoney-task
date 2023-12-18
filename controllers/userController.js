@@ -5,19 +5,24 @@ const checkController=async (req, res) => {
     try {
         const email = req.body.email;
         const month = req.body.month;
-        const existingUser = await User.findOne({
+        const existingUser = await User.find({
             email: email,
         });
 
+        // for(it of existingUser){
+        //     console.log(it);
+        // }
+
         if (existingUser) {
-            console.log("You have already registered for this month");
-            console.log(month-1, new Date().getMonth());
-            if (month  === existingUser.month) {
-                // If the month is  the current month, do not allow registration
-                return res.status(200).send({
-                    success: false,
-                    message: "You have already registered this month. Batch change is not allowed",
-                });
+            // console.log("You have already registered for this month");
+            for(it of existingUser){
+                if (month  === it.month) {
+                    // If the month is  the current month, do not allow registration
+                    return res.status(200).send({
+                        success: false,
+                        message: "You have already registered this month. Batch change is not allowed",
+                    });
+                }
             }
         }
 
