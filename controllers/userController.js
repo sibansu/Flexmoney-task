@@ -11,7 +11,8 @@ const checkController=async (req, res) => {
 
         if (existingUser) {
             console.log("You have already registered for this month");
-            if (month - 1 === new Date().getMonth()) {
+            console.log(month-1, new Date().getMonth());
+            if (month  === existingUser.month) {
                 // If the month is  the current month, do not allow registration
                 return res.status(200).send({
                     success: false,
