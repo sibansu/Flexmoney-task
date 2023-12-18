@@ -24,3 +24,7 @@
 ### The project uses React for the frontend and Node.js with Express for the backend.
 ### MongoDB is used as the database to store user information.
 ### The admission form enforces age limits, batch selection rules, and prevents duplicate registrations within the same month.
+
+
+## ER-Diagram
+![ERD Flexmoney](https://github.com/sibansu/Flexmoney-task/assets/87473469/0f01aebb-67c0-4121-bb29-a96fd68bbfdf)
